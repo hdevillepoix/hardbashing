@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in `find . -name "*_2016-*NEF"`; do 
+echo -n $(basename ${i})
+echo -n "  "
+exiv2 -p a ${i} | grep hutter | awk '{print $4}'
+done | sort -nr -k2 > shutter_counts_pipeline
