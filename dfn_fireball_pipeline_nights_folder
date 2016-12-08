@@ -1,0 +1,9 @@
+#!/bin/bash
+for i in $(find . -mindepth 4 -maxdepth 4 -type d  -not -name "*_video" -not -name "EVENTS*" | sed "s|^\./||"); do
+IFS='/' read -r -a a <<< "$i"
+IFS='-' read -r -a b <<< ${a[3]}
+IFS='_' read -r -a c <<< ${b[2]}
+
+# echo datastore download string
+echo "/projects/DFN/${a[1]}/${a[2]}/${c[0]}/${a[3]}/*_*-*-*_*002*_DSC_*.NEF"
+done
