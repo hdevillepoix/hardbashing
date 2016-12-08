@@ -6,4 +6,5 @@ IFS='_' read -r -a c <<< ${b[2]}
 
 # echo datastore download string
 echo "/projects/DFN/${a[1]}/${a[2]}/${c[0]}/${a[3]}/*_*-*-*_*002*_DSC_*.NEF"
+echo "get /projects/DFN/${a[1]}/${a[2]}/${c[0]}/${a[3]}/*dfnstation.cfg"
 done
