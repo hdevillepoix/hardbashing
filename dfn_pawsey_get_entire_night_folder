@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cam=DFNSMALL36
+year=2015
+month=12
+
+for i in 0{1..9} {10..31} ; do
+a=$(find . -name "${year}-${month}-${i}_${cam}_1*" | sed "s|^\./||")
+echo  "get /projects/DFN/${year}/${month}/${i}/${a}/ "
+done  | sort
