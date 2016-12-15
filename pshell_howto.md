@@ -1,5 +1,16 @@
 
 
+## Delegate credentials first by manually loging in
+$ pshell 
+Reading config [/home/dfn-user/.mf_config]
+Welcome to pshell, type 'help' for a list of commands
+pawsey:/projects>login
+Username: USER
+Password: 
+pawsey:/projects>delegate 30
+Delegating until: 15-Jan-2017 02:09:48
+pawsey:/projects>exit
+
 ## command to run
 `pshell -i`
 
