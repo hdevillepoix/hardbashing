@@ -1,0 +1,3 @@
+## basic timelapse
+ffmpeg -r 30 -pattern_type glob -i "*.jpg" -s 1840x1228  -vcodec libx264 out.mp4
+
