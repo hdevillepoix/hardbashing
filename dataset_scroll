@@ -1,0 +1,2 @@
+alias eeog='eog $(find . -name "*.jpg" )'
+for i in DN15*; do echo ${i}; cd ${i}; eeog; echo "a = awesome  -- g = good  --  b = boring  --  s = special --  w = weird"; read res; echo "${i},${res}" >> /home/hadry/event_rating.csv ; cd .. ; done
