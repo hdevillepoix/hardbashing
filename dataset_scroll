@@ -1,2 +1,5 @@
 alias eeog='eog $(find . -name "*.jpg" )'
 for i in DN15*; do echo ${i}; cd ${i}; eeog; echo "a = awesome  -- g = good  --  b = boring  --  s = special --  w = weird"; read res; echo "${i},${res}" >> /home/hadry/event_rating.csv ; cd .. ; done
+
+# extract thumbnails
+for i $(find . -maxdepth 2 -type d   -wholename "./DN1*/*_*" | grep -v traj); do echo ${i}; cd ${i}; dce *.NEF ; cd /home/NAS_clone/events_trello ; done
