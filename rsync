@@ -1,2 +1,0 @@
-## Resume failed scp
-`rsync --partial --progress --rsh=ssh local_file user@host:remote_file`
