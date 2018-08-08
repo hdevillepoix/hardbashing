@@ -5,7 +5,7 @@
 ## Home backup
 `sudo umount nas events`
 
-`rsync -narv --human-readable --progress   /home/ /run/media/hadry/data1/home_backup/`
+`rsync -narv --exclude=.cache --human-readable --progress   /home/ /run/media/hadry/data1/home_backup/`
 
 
 ## /opt backup
