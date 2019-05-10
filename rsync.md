@@ -1,6 +1,8 @@
 ## Resume failed scp
 `rsync --partial --progress --rsh=ssh local_file user@host:remote_file`
 
+## sync remote system logs
+`rsync -avuz --timeout=300 --prune-empty-dirs --exclude=*log_tether.txt --include=*.txt --include=*.log --include=*.cfg --include=mask.png --include=*.tile.jpg --filter="-! */" root@:/data0/D /home/data`
 
 ## Home backup
 `sudo umount nas events`
