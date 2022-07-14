@@ -7,7 +7,9 @@
 ## Home backup
 `sudo umount nas events`
 
-`rsync -narv --exclude=.cache --human-readable --progress   /home/ /run/media/hadry/data1/home_backup/`
+`rsync -narv --exclude=.cache --exclude=.aladin  --exclude=.googleearth --exclude=.mozilla --human-readable --progress /home/hadry /media/hadry/HARD_pers_A_11/home_backup/`
+
+`rsync -narv --human-readable --progress /home/data /media/hadry/HARD_pers_A_11/home_backup/`
 
 
 ## /opt backup
